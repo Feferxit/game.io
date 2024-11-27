@@ -14,6 +14,7 @@ body {
 header {
     background-color: #1a1a1a;
     padding: 1rem 2rem;
+    margin-bottom: 0; /* Garantir que não há margem inferior */
 }
 
 .menu {
@@ -33,6 +34,10 @@ header {
     color: #ff4a57;
 }
 
+main {
+    padding: 2rem;
+    position: relative;
+}
 
 /* Seções */
 .section {
@@ -46,6 +51,7 @@ header {
     display: block;
     opacity: 1;
     transform: translateY(0);
+    margin-top: 0; /* Remover margem extra quando ativo */
 }
 
 /* Galeria dentro da Section */
@@ -96,12 +102,13 @@ header {
     align-items: center;
 }
 
-.catalogo {
+#Catálogo {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    width: 75%; /* Ajusta a largura da galeria para a seção */
-    margin-left: 25%; /* Ajuste para compensar a sidebar */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    margin-top: 0; /* Garantir que não haja espaço extra */
+    position: relative; /* Pode ser removido se não for necessário */
 }
 
 .jogo {
@@ -155,5 +162,5 @@ footer {
 }
 
 footer p {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
 }

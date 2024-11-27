@@ -1,21 +1,57 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
+    height: 100vh;
+    display: grid;
+    align-items: start; /* Alinha o conteúdo ao topo */
+    justify-content: center; /* Alinha horizontalmente ao centro */
+    background-color: #03031d;
+    padding: 1rem; /* Adiciona um espaçamento ao redor */
 }
 
-body {
-    font-family: 'Arial', sans-serif;
+.lupa {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 9999; /* Garante que a lupa fique sobre outros elementos */
+}
+
+.lupa img {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.lupa img:hover {
+    transform: scale(1.1);
+}
+
+.pesquisa {
+    display: none;
+    border: 1px solid #02021a;
+    background-color: #0a0a39;
     color: #fff;
-    background-color: #121212;
+    border-radius: 25px;
+    padding: 0.5rem;
+    outline: none;
+    font-size: 1rem;
+    transition: width 0.3s;
+}
+
+.lupa:hover .pesquisa {
+    display: block;
+    width: 200px;
 }
 
 header {
-    background-color: #1a1a1a;
+    background-color: #03031d;
     padding: 1rem 2rem;
-    margin-bottom: 0; /* Garantir que não há margem inferior */
+    width: 80%; /* Largura do header */
+    margin: 0 auto; /* Centraliza horizontalmente */
 }
+
 
 .menu {
     display: flex;
@@ -30,32 +66,72 @@ header {
     transition: color 0.3s;
 }
 
-.menu a:hover, .menu a.active {
-    color: #ff4a57;
+.menu a:hover, 
+.menu a.active {
+    color: #471a1d;
 }
 
 main {
+    display: flex;
     padding: 2rem;
+    gap: 2rem;
     position: relative;
 }
 
-/* Seções */
-.section {
-    display: none;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+/* Sidebar */
+.sidebar {
+    position: fixed; /* Torna a sidebar fixa no lado esquerdo da página */
+    top: 10px; /* Fica no topo */
+    left: 0; /* Fica no lado esquerdo */
+    width: 13%; /* Largura da sidebar */
+    height: 89vh; /* Faz a sidebar ocupar a altura inteira da página */
+    background-color: #050229;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    z-index: 1000; /* Coloca a sidebar sobre outros elementos */
 }
 
-.section.active {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
-    margin-top: 0; /* Remover margem extra quando ativo */
+.sidebar h1 {
+    font-size: 2rem;
+    color: #a0b3ff;
+}
+
+/* Lista de Itens */
+.list {
+    display: flex;
+    gap: 0.30rem;
+    transform-style: preserve-3d;
+    list-style-type: none;
+    margin-left: 0; /* Remove a margem esquerda da lista */
+    margin-left: 150px; /* Move para a direita */
+}
+
+.list:hover :not(:hover) {
+    margin: 0 -30px;
+    transform: perspective(500px) rotateY(45deg) scale(0.95);
+}
+
+
+.item {
+    position: relative;
+    width: 200px;
+    aspect-ratio: 3/4;
+    border-radius: 0.5rem;
+    background-size: cover;
+    background-position: center;
+    transition: margin 0.5s, transform 0.5s;
+}
+
+.item:hover {
+    transform: perspective(500px) rotateY(0) scale(1.2);
 }
 
 /* Galeria dentro da Section */
-#home {
+#Home {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
@@ -80,87 +156,24 @@ main {
 
 .gallery-item::before {
     position: absolute;
-    top: 1rem;
-    left: 1rem;
+    top: 0.5rem;
+    left: 0.5rem;
     background: rgba(0, 0, 0, 0.5);
-    padding: 0.3rem 0.7rem;
+    padding: 0.2rem 0.5rem;
     border-radius: 0.25rem;
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 .gallery-item::after {
     position: absolute;
-    bottom: 1rem;
-    right: 1rem;
+    bottom: 0.5rem;
+    right: 0.5rem;
     background: rgba(0, 0, 0, 0.5);
-    padding: 0.3rem 0.7rem;
+    padding: 0.2rem 0.5rem;
     border-radius: 50%;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-#Catálogo {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 2rem;
-    width: 100%;
-    margin-top: 0; /* Garantir que não haja espaço extra */
-    position: relative; /* Pode ser removido se não for necessário */
-}
-
-.jogo {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    text-align: center;
-}
-
-.jogo img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.jogo h2 {
-    font-size: 1.8rem;
-    color: #333;
-    margin: 1rem 0;
-}
-
-.jogo p {
-    color: #777;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-}
-
-.precos {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    font-size: 1.2rem;
-}
-
-.precos p {
-    color: #03031d;
-}
-
-.precos strong {
-    color: #471a1d;
-    font-weight: bold;
-}
-
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #03031d;
-    color: #fff;
-    font-size: 0.9rem;
-}
-
-footer p {
-    margin-top: 1rem;
 }
