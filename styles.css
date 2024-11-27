@@ -8,7 +8,7 @@
 body {
     font-family: 'Arial', sans-serif;
     color: #fff;
-    background-color: #121212;
+    background-color: #03081c;
 }
 
 header {
@@ -64,13 +64,10 @@ main {
 }
 
 .gallery-item {
-    background-size: cover;
-    background-position: center;
-    aspect-ratio: 1/1.2;
-    border-radius: 0.5rem;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
+    display: flex;
+    width: 100%;
+    height: 0;
+    padding-top: 120%; /* Para manter a proporção */    
     transition: transform 0.3s;
 }
 
@@ -105,16 +102,15 @@ main {
 #Catálogo {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 2rem;
+    gap: 7rem;
     width: 100%;
     margin-top: 0; /* Garantir que não haja espaço extra */
-    position: relative; /* Pode ser removido se não for necessário */
 }
 
 .jogo {
-    background-color: #fff;
+    background-color: #050b24;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(3, 6, 49, 0.1);
     padding: 1rem;
     text-align: center;
 }
@@ -127,12 +123,12 @@ main {
 
 .jogo h2 {
     font-size: 1.8rem;
-    color: #333;
+    color: #cebfd7;
     margin: 1rem 0;
 }
 
 .jogo p {
-    color: #777;
+    color: #74a0ff;
     font-size: 1rem;
     margin-bottom: 1rem;
 }
@@ -145,22 +141,11 @@ main {
 }
 
 .precos p {
-    color: #03031d;
+    color: #a3a3da;
 }
 
 .precos strong {
-    color: #471a1d;
+    color: #4a54df;
     font-weight: bold;
 }
 
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #03031d;
-    color: #fff;
-    font-size: 0.9rem;
-}
-
-footer p {
-    margin-top: 1rem;
-}
