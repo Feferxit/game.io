@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Jogos</title>
+  <link rel="stylesheet" href="catalogo.css">
+</head>
+<body>
+  <header class="sidebar">
+    <h1>Catálogo de Jogos</h1>
+    <nav>
+      <button class="filter-btn" data-category="all">Todos</button>
+      <button class="filter-btn" data-category="acao">Ação</button>
+      <button class="filter-btn" data-category="rpg">RPG</button>
+      <button class="filter-btn" data-category="indie">Indie</button>
+    </nav>
+    <div class="lupa">
+      <img src="lupa-roxa.png" alt="Ícone de lupa">
+      <input type="text" placeholder="Pesquisar..." class="pesquisa">
+    </div>
+  </header>
+
+  <main class="catalog">
+    <!-- Cartões de jogos -->
+    <div class="game-card" data-category="acao">
+      <img src="game1.jpg" alt="Jogo Ação 1">
+      <h2>Jogo Ação 1</h2>
+      <p>Aventura e adrenalina em cada passo.</p>
+    </div>
+    <div class="game-card" data-category="rpg">
+      <img src="game2.jpg" alt="Jogo RPG 1">
+      <h2>Jogo RPG 1</h2>
+      <p>Uma jornada épica cheia de mistérios.</p>
+    </div>
+    <div class="game-card" data-category="indie">
+      <img src="game3.jpg" alt="Jogo Indie 1">
+      <h2>Jogo Indie 1</h2>
+      <p>Descubra um mundo único e criativo.</p>
+    </div>
+    <div class="game-card" data-category="acao">
+      <img src="game4.jpg" alt="Jogo Ação 2">
+      <h2>Jogo Ação 2</h2>
+      <p>Lute contra inimigos em alta velocidade.</p>
+    </div>
+    <div class="game-card" data-category="rpg">
+      <img src="game5.jpg" alt="Jogo RPG 2">
+      <h2>Jogo RPG 2</h2>
+      <p>Explore um mundo de fantasia sem limites.</p>
+    </div>
+    <div class="game-card" data-category="indie">
+      <img src="game6.jpg" alt="Jogo Indie 2">
+      <h2>Jogo Indie 2</h2>
+      <p>Uma experiência indie única e envolvente.</p>
+    </div>
+    <div class="game-card" data-category="acao">
+      <img src="game7.jpg" alt="Jogo Ação 3">
+      <h2>Jogo Ação 3</h2>
+      <p>Prepare-se para a ação intensa e desafios emocionantes.</p>
+    </div>
+    <div class="game-card" data-category="rpg">
+      <img src="game8.jpg" alt="Jogo RPG 3">
+      <h2>Jogo RPG 3</h2>
+      <p>Descubra segredos antigos e forje seu próprio destino.</p>
+    </div>
+    <div class="game-card" data-category="indie">
+      <img src="game9.jpg" alt="Jogo Indie 3">
+      <h2>Jogo Indie 3</h2>
+      <p>Explore um mundo artesanal cheio de surpresas.</p>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

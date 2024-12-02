@@ -7,42 +7,50 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h1>Game.io</h1>
+        <p>Lista de recomendados</p>
         <nav class="menu">
             <a href="#home" class="active">Home</a>
-            <a href="#catalogo">Catálogo</a>
-            <a href="#Informações">Informações</a>
-            <a href="#Contato">Contato</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="#informacoes">Informações</a>
+            <a href="#contato">Contato</a>
             <a href="#chat">Chat</a>
         </nav>
-    </header>
+    </aside>
+
+    <!-- Pesquisa -->
     <div class="lupa">
-        <img src="lupa-roxa.png" alt="Lupa">
+        <img src="lupa-roxa.png" alt="Ícone de lupa">
         <input type="text" placeholder="Pesquisar..." class="pesquisa">
     </div>    
-    <ul class='list'>
-        <li class='item' style="background-image: url('MINECRAFT.jpeg');"></li>
-        <li class='item' style="background-image: url('STARDEW.jpeg');"></li>
-        <li class='item' style="background-image: url('FNAF1.jpeg');"></li>
-        <li class='item' style="background-image: url('MISFORTUNE.jpeg');"></li>
-        <li class='item' style="background-image: url('SALLY.jpeg');"></li>
-        <li class='item' style="background-image: url('SECUNDS.jpeg');"></li>
-      </ul>
-      <main>
-        <aside class="sidebar">
-            <h1>Game.io</h1>
-            <p>Lista de recomendados</p>
-        </aside>
-         <!-- Conteúdo de cada seção -->
-         <section id="Home" class="section active">
-            <div class="gallery-item" style="background-image: url('WhatsApp\ Image\ 2024-11-26\ at\ 15.06.07.jpeg');"></div>
-            <div class="gallery-item" style="background-image: url('WhatsApp\ Image\ 2024-11-26\ at\ 15.07.05.jpeg');"></div>
-            <div class="gallery-item" style="background-image: url('WhatsApp\ Image\ 2024-11-26\ at\ 15.08.02.jpeg');"></div>
-            <div class="gallery-item" style="background-image: url('WhatsApp\ Image\ 2024-11-26\ at\ 15.08.34.jpeg');"></div>
-            <div class="gallery-item" style="background-image: url('WhatsApp\ Image\ 2024-11-26\ at\ 15.09.09.jpeg');"></div>
-            <div class="gallery-item" style="background-image: url('WhatsApp\ Image\ 2024-11-26\ at\ 15.10.27.jpeg');"></div>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <section id="home" class="page active">
+            <!-- Lista de jogos recomendados -->
+            <ul class="list">
+                <li class="item" style="background-image: url('MINECRAFT.jpeg');"></li>
+                <li class="item" style="background-image: url('STARDEW.jpeg');"></li>
+                <li class="item" style="background-image: url('FNAF1.jpeg');"></li>
+                <li class="item" style="background-image: url('MISFORTUNE.jpeg');"></li>
+                <li class="item" style="background-image: url('SALLY.jpeg');"></li>
+                <li class="item" style="background-image: url('SECUNDS.jpeg');"></li>
+            </ul>
+
+            <!-- Galeria -->
+            <div class="gallery">
+                <div class="gallery-item" style="background-image: url('WhatsApp Image 2024-11-26 at 15.06.07.jpeg');"></div>
+                <div class="gallery-item" style="background-image: url('WhatsApp Image 2024-11-26 at 15.07.05.jpeg');"></div>
+                <div class="gallery-item" style="background-image: url('WhatsApp Image 2024-11-26 at 15.08.02.jpeg');"></div>
+                <div class="gallery-item" style="background-image: url('WhatsApp Image 2024-11-26 at 15.08.34.jpeg');"></div>
+                <div class="gallery-item" style="background-image: url('WhatsApp Image 2024-11-26 at 15.09.09.jpeg');"></div>
+                <div class="gallery-item" style="background-image: url('WhatsApp Image 2024-11-26 at 15.10.27.jpeg');"></div>
+            </div>
         </section>
     </main>
+
     <script src="java.js"></script>
 </body>
 </html>
